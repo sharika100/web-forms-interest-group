@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✨ Interest Group Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>🎯 Join Our Interest Group</h1>
+    <p>Fill out the form below to register your interest!</p>
+
+    <form id="interestForm">
+      <!-- Personal Details -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required placeholder="example@email.com" />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required />
+
+      <!-- Demographic Info -->
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="10" max="100" required />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <!-- Interest Selection -->
+      <label for="interest">Area of Interest:</label>
+      <select id="interest" name="interest" required>
+        <option value="">-- Select an Interest --</option>
+        <option value="AI">Artificial Intelligence</option>
+        <option value="WebDev">Web Development</option>
+        <option value="CyberSec">Cyber Security</option>
+        <option value="DataSci">Data Science</option>
+        <option value="Robotics">Robotics</option>
+      </select>
+
+      <!-- Experience -->
+      <p>Experience Level:</p>
+      <div class="radio-group">
+        <label><input type="radio" name="experience" value="Beginner" required /> Beginner</label>
+        <label><input type="radio" name="experience" value="Intermediate" /> Intermediate</label>
+        <label><input type="radio" name="experience" value="Advanced" /> Advanced</label>
+      </div>
+
+      <!-- File Upload -->
+      <label for="resume">Upload Your Resume (optional):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+
+      <!-- Terms -->
+      <label>
+        <input type="checkbox" id="agree" required /> I agree to receive updates and newsletters.
+      </label>
+
+      <button type="submit">Submit 📨</button>
+    </form>
+
+    <div id="successMessage" class="hidden">
+      <h2>✅ Form Submitted Successfully!</h2>
+      <p>Thank you for joining our interest group.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
